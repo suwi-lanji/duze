@@ -6,6 +6,7 @@
   <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
   <!-- For image_picker -->
   <uses-permission android:name="android.permission.CAMERA"/>
+
   <application
       android:label="duze"
       android:name="${applicationName}"
@@ -13,6 +14,8 @@
     <meta-data
         android:name="com.google.android.gms.ads.APPLICATION_ID"
         android:value="ca-app-pub-7850647413674959~1483502827"/>
+
+    <!-- Main Activity with App Links -->
     <activity
         android:name=".MainActivity"
         android:exported="true"
@@ -25,17 +28,30 @@
         <meta-data
             android:name="io.flutter.embedding.android.NormalTheme"
             android:resource="@style/NormalTheme"/>
+
+        <!-- Launcher Intent -->
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
+
+        <!-- Custom Scheme (duze://auth) -->
         <intent-filter>
             <action android:name="android.intent.action.VIEW"/>
             <category android:name="android.intent.category.DEFAULT"/>
             <category android:name="android.intent.category.BROWSABLE"/>
             <data android:scheme="duze" android:host="auth"/>
         </intent-filter>
+
+        <!-- Android App Links -->
+        <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https" android:host="twalitso.inongo.com" android:pathPrefix="/"/>
+        </intent-filter>
     </activity>
+
     <!-- Facebook configurations -->
     <meta-data
         android:name="com.facebook.sdk.ApplicationId"
@@ -57,11 +73,13 @@
             <data android:scheme="@string/fb_login_protocol_scheme"/>
         </intent-filter>
     </activity>
+
     <!-- Flutter embedding -->
     <meta-data
         android:name="flutterEmbedding"
         android:value="2"/>
   </application>
+
   <queries>
     <intent>
         <action android:name="android.intent.action.PROCESS_TEXT"/>
