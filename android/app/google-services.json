@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "191261911563",
+    "project_id": "duze-90301",
+    "storage_bucket": "duze-90301.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191261911563:android:9793a9873f1735eeabf50e",
+        "android_client_info": {
+          "package_name": "com.codenamegoon.duze"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD39tiDUhSN-VoO65DFnPrjVs5g63o0sYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

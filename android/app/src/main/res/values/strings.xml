@@ -1,0 +1,9 @@
+<resources>
+ <string name="app_name">Duze</string>
+  <!--<string name="facebook_app_id">1015132652901802</string>
+  <string name="fb_login_protocol_scheme">fb1015132652901802</string>
+   <string name="facebook_client_token">2b1a87aed8f3739473c5da3a65aa259d</string>-->
+    <string name="facebook_app_id">1398123027976402</string>
+  <string name="fb_login_protocol_scheme">fb1398123027976402</string>
+   <string name="facebook_client_token">c785fb0aabd1caefdf42db4f498da471</string>
+</resources>
